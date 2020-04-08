@@ -5,7 +5,7 @@ class Genre
   
   def initialize(name)
     @name = name
-
+    @@all << self
   end
   
   def self.all
@@ -17,6 +17,6 @@ class Genre
   end
   
   def artists
-    
+    songs.collect{ s.genre  }.flatten
   end
 end
